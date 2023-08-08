@@ -74,7 +74,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'ZK Pool Doc',
+        title: 'ZK Pool Docs',
         logo: {
           alt: 'ZK Pool Logo',
           src: 'img/zkpool_icon.png',
