@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ZK Pool Doc',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/zkpool_icon.png',
 
   // Set the production url of your site here
   url: 'https://zkpool.io',
@@ -61,6 +61,13 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      { indexBlog: false, docsRouteBasePath: '/', indexPages: true },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -70,7 +77,7 @@ const config = {
         title: 'ZK Pool Doc',
         logo: {
           alt: 'ZK Pool Logo',
-          src: 'img/logo.svg',
+          src: 'img/zkpool_icon.png',
         },
         items: [
           {
