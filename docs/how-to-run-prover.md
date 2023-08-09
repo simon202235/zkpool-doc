@@ -1,34 +1,40 @@
 ## Introduction
 
-Docs about how to run a standalone uniform zkpool prover build upon multiple zkp circuit project 
+This document represent on how to run a standalone uniform ZK Pool prover build upon multiple ZKP circuit projects. 
 
-### environment requirements
+### Environment requirements
 
 * UNIX-like OS (Ubuntu 20.04,Ubuntu22.04 recommend)
 * Rust 1.65.0+
 
+### run zkpool-prover with one command
 
-### run zkpool-prover by compile from source code
+Notice: please replace the `<account_access_key>` and `<device_id>` with your own account access key and device id.
 
-```
-    git clone https://github.com/aoraki-labs/zkpool-prover.git
-    cd zkpool-prover
-    cargo build --release
-    wget https://storage.googleapis.com/zkevm-circuits-keys/kzg_bn254_21.srs -P ./target/release
-    cd ./target/release
-   ./zkpool-prover -k PYFkD1n6Q6btC3VcPJ29POm0DOWT7SXT -u 123456789 -p 35.201.232.215:18081
-```
-*  run parameters explain below
-```
-    -k: the prover access key
-    -u: the prover device id (optional,program will generate one automatically if not set )
-    -p: the zkpool scheduler pool address
+```bash
+curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_ubuntu-20.04_cpu.sh | sudo sh -s -- --access-key <account_access_key> --device-id <device_id>    
 ```
 
 
-### run zkpool-prover by release binary with one command
+### Compile and run zkpool-prover from source code
+
+```bash
+git clone https://github.com/aoraki-labs/zkpool-prover.git
+
+cd zkpool-prover
+cargo build --release
+wget https://storage.googleapis.com/zkevm-circuits-keys/kzg_bn254_21.srs -P ./target/release
+
+cd ./target/release
+./zkpool-prover -k <account_access_key> -u <device_id> -p <scheduler_address>
+``` 
+
+* zkpool-prover parameters
 ```
-    curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_ubuntu-20.04_cpu.sh | sudo sh -s -- --access-key account_access_key --device-id device_id    
+-k: the prover access key
+-u: the prover device id (optional,program will generate one automatically if not set )
+-p: the zkpool scheduler pool address
 ```
+
 
 
