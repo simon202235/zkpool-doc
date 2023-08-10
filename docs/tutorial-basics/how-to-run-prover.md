@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 ## Introduction
 
 This document represent on how to run a standalone uniform ZK Pool prover build upon multiple ZKP circuit projects. 
