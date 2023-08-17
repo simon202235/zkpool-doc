@@ -1,8 +1,9 @@
 ---
-sidebar_position: 7
+sidebar_label: 'How to Run a Prover'
+sidebar_position: 3
 ---
 
-## Introduction
+# How to Run a Prover
 
 This document represent on how to run a standalone uniform ZK Pool prover build upon multiple ZKP circuit projects. 
 
