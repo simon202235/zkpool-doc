@@ -11,13 +11,20 @@ This document represent on how to run a standalone uniform ZK Pool prover build 
 
 * UNIX-like OS (Ubuntu 20.04,Ubuntu22.04 recommend)
 * Rust 1.65.0+
+* 16 core + 32G memory
 
 ### run zkpool-prover with one command
 
 Notice: please replace the `<account_access_key>` and `<device_id>` with your own account access key and device id.
 
+* Ubuntu
 ```bash
-curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_ubuntu-20.04_cpu.sh | sudo sh -s -- --access-key <account_access_key> --device-id <device_id>    
+curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_ubuntu_cpu | sh -s -- --access-key <account_access_key> --device-id <device_id> 
+```
+
+* MacOS
+```bash
+curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_macos-catalina_cpu | sh -s -- --access-key <account_access_key> --device-id <device_id>
 ```
 
 
@@ -39,6 +46,11 @@ cd ./target/release
 -k: the prover access key
 -u: the prover device id (optional,program will generate one automatically if not set )
 -p: the zkpool scheduler pool address
+```
+
+### Run script
+```bash
+    ./run-prover.sh #Notice: remind to modify the ./zkpool-prover running parameters in the shell script
 ```
 
 
