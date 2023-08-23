@@ -9,7 +9,8 @@ This document explains how to run a ZKPool prover.
 
 After logging into ZKPool, follow the guide on how to connect to ZKPool and run a prover.
 
-!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75e795e7-49f7-43f2-b36d-c9412763b3ba/Untitled.png
+![image](https://github.com/aoraki-labs/zkpool-doc/assets/117694584/1d57ab9f-213d-4744-b76c-d56085728fd5)
+
 
 The basic flow is as follows:
 
