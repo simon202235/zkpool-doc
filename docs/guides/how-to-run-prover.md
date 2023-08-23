@@ -5,53 +5,15 @@ sidebar_position: 3
 
 # How to Run a Prover
 
-This document represent on how to run a standalone uniform ZK Pool prover build upon multiple ZKP circuit projects. 
+This document explains how to run a ZKPool prover.
 
-### Environment requirements
+After logging into ZKPool, follow the guide on how to connect to ZKPool and run a prover.
 
-* UNIX-like OS (Ubuntu 20.04,Ubuntu22.04 recommend)
-* Rust 1.65.0+
-* 16 core + 32G memory
+!https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75e795e7-49f7-43f2-b36d-c9412763b3ba/Untitled.png
 
-### run zkpool-prover with one command
+The basic flow is as follows:
 
-Notice: please replace the `<account_access_key>` and `<device_id>` with your own account access key and device id.
-
-* Ubuntu
-```bash
-curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_ubuntu_cpu | sh -s -- --access-key <account_access_key> --device-id <device_id> 
-```
-
-* MacOS
-```bash
-curl -sSf -L https://zkpool-connect-1318455074.cos.na-siliconvalley.myqcloud.com/prover-client/join_zkpool_macos-catalina_cpu | sh -s -- --access-key <account_access_key> --device-id <device_id>
-```
-
-
-### Compile and run zkpool-prover from source code
-
-```bash
-git clone https://github.com/aoraki-labs/zkpool-prover.git
-
-cd zkpool-prover
-cargo build --release
-wget https://storage.googleapis.com/zkevm-circuits-keys/kzg_bn254_21.srs -P ./target/release
-
-cd ./target/release
-./zkpool-prover -k <account_access_key> -u <device_id> -p <scheduler_address>
-``` 
-
-* zkpool-prover parameters
-```
--k: the prover access key
--u: the prover device id (optional,program will generate one automatically if not set )
--p: the zkpool scheduler pool address
-```
-
-### Run script
-```bash
-    ./run-prover.sh #Notice: remind to modify the ./zkpool-prover running parameters in the shell script
-```
-
-
-
+1. Choose your operating system: Ubuntu 20.04/22.04 or Mac OS Catalina.
+2. Choose between CPU/GPU (coming soon).
+3. Generate an access key for your account.
+4. Follow one command to download your keys and prover binary, and then run the prover binary.
