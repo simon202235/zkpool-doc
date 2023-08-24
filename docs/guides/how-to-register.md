@@ -15,5 +15,5 @@ Steps are:
 3. By default the overview page is displayed
 4. Click the user icon on the top right corner, it will bring the user to user center pages. 
 ![User center](./images/user-center.png)
-5. From the "user details" page, user can generate the access key for later prover to connec to ZKPool
+5. From the "user details" page, user can generate the access key for prover workers later to connect to ZKPool. Make sure to copy the key somewhere as it is only shown once.
  ![User details](./images/user-details.png)
