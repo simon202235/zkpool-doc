@@ -54,15 +54,16 @@ According to [Taiko](https://taiko.mirror.xyz/HJCWBluTwmNyWRkhzIXXr0k5xAaalRNtml
 > Please note, reward or profit considerations (if any) will heavily depend on a variety of factors, and are in no way guaranteed. This holds for proposers, provers, and all network participants. Certain assumptions used may not reflect reality for the duration of the testnet period, protocol flaws can be found, and mainnet timing is uncertain. We reserve the right to adjust the program, with the ultimate goal of testing unprecedented permissionless proposing and proving in a ZK-Rollup. You should only participate if you are keen to help the network test a technical design. Basically, for science.
 > 
 
-ZKPool will share the reward of TTKO  with provers, and in ZKPool A0-0, the distribution rule is:
+ZKPool will share the reward of TTKOe  with provers, and in ZKPool A0-0, the distribution rule is:
 
 - ZKPool: 20%
 - Prover: 80%
 
 Note: 
 
-1. The rewards are calculated based on a certain interval, for example, on a daily basis.
-2. Currently, the reward cannot be withdrawn and will be recorded under the prover's wallet address. ZKPool will soon upgrade to support users in withdrawing the TTKO.
-3. The reward's actual value is not guaranteed. We participate to help Taiko to test and become a successful zk-rollup. 
-4. ZKPool has the right to adjust the distribution rule in the future.
+1. The distribution rule is just for testing in the Testnet. ZKPool has the right and plans to adjust it in the future.
+2. The rewards are calculated based on a certain interval, for example, on a daily basis.
+3. Currently, the reward cannot be withdrawn and will be recorded under the prover's wallet address. ZKPool will soon upgrade to support users in withdrawing the TTKOe.
+4. The reward's actual value is not guaranteed. We participate to help Taiko to test and become a successful zk-rollup. 
+5. 
 
