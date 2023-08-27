@@ -65,5 +65,4 @@ Note:
 2. The rewards are calculated based on a certain interval, for example, on a daily basis.
 3. Currently, the reward cannot be withdrawn and will be recorded under the prover's wallet address. ZKPool will soon upgrade to support users in withdrawing the TTKOe.
 4. The reward's actual value is not guaranteed. We participate to help Taiko to test and become a successful zk-rollup. 
-5. 
 
