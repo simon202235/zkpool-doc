@@ -11,7 +11,7 @@ Taiko is a decentralized, Ethereum-equivalent zk-rollup project with Type 1 zkEV
 
 ZKPool A0 Phase 0 (ZKPool A0-0) is dedicated to the Taiko Alpha-4 (A4) Testnet, and supports users who want to join as individual provers. According to the plan, ZKPool will soon expand into more ZKP projects.
 
-Taiko A4 Testnet comes with a new staking-based prover economics. Blocks will be distributed to the top 32 staked provers. To become one of the top 32 provers, a substantial amount of Test Taiko tokens (TTKO) and a minimum of 32 prover machines are required. It's very difficult for smaller and solo provers to successfully compete in this staking contest.
+Taiko A4 Testnet comes with a new staking-based prover economics. Blocks will be distributed to the top 32 staked provers. To become one of the top 32 provers, a substantial amount of Test Taiko tokens (TTKOe) and a minimum of 32 prover machines are required. It's very difficult for smaller and solo provers to successfully compete in this staking contest.
 
 ZKPool aims to provide the following capabilities:
 
