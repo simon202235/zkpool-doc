@@ -18,3 +18,11 @@ The basic flow is as follows:
 2. Choose between CPU/GPU (coming soon).
 3. Generate an access key for your account.
 4. Follow one command to download your keys and prover binary, and then run the prover binary.
+
+## How to stop a prover
+
+To stop a running prover, simple run the following command
+
+```shell
+pkill zkpool-prover
+```
