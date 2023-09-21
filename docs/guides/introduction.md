@@ -7,12 +7,12 @@ sidebar_position: 1
 
 ZKPool aims to connect various ZKP applications and ZKP provers and provide the following capabilities:
 
-- ZKPool gathers smaller provers' capacity together and stakes as a pool.
+- ZKPool gathers smaller provers' capacity together and provides bond as a pool.
 - ZKPool operates to minimize the risks of being slashed.
 - ZKPool calculates and distributes the rewards of provers.
 - ZKPool makes it really easy for provers to join.
 
-Initially, ZKPool will assume the risk and stake on behalf of all the provers connected to the pool. The pool is open for registered provers to connect to.
+Initially, ZKPool will assume the risk and provides bond on behalf of all the provers connected to the pool. The pool is open for registered provers to connect to.
 
 ## General Flow
 
@@ -45,10 +45,6 @@ The hardware that meets the minimum requirements can run CPU prover binary:
 
 #### Reward distribution
 
-According to [Taiko](https://taiko.mirror.xyz/HJCWBluTwmNyWRkhzIXXr0k5xAaalRNtmlyDMJTu_ws):
-
-> Please note, reward or profit considerations (if any) will heavily depend on a variety of factors, and are in no way guaranteed. This holds for proposers, provers, and all network participants. Certain assumptions used may not reflect reality for the duration of the testnet period, protocol flaws can be found, and mainnet timing is uncertain. We reserve the right to adjust the program, with the ultimate goal of testing unprecedented permissionless proposing and proving in a ZK-Rollup. You should only participate if you are keen to help the network test a technical design. Basically, for science.
-> 
 As ZKPool takes the risk of slashing, pays the Gas fee for submitting the proof and operation cost, ZKPool will share the reward of tokens with provers. Currently the distribution rule is:
 
 - ZKPool: 20%
@@ -57,10 +53,11 @@ As ZKPool takes the risk of slashing, pays the Gas fee for submitting the proof 
 Note: 
 
 1. The distribution rule is only for testing purposes in the Testnet. ZKPool has the right and plans to adjust it in the future.
-2. Rewards are calculated based on a specific interval, such as on a daily basis.
-3. Currently, rewards cannot be withdrawn and will be recorded under the prover's wallet address. ZKPool will soon upgrade to support users in withdrawing the tokens.
-4. The actual value of the reward is not guaranteed. We participate to help Taiko test and become a successful zk-rollup.
-5. ZKPool may consider offering additional incentives from the platform side, especially for early participants. However, this has not yet been determined.
+2. The default reward token is ETH, and ZKPool may add more ERC20 tokens as reward, such as TTKOj.
+3. Rewards are calculated based on a specific interval, such as on a daily basis.
+4. Currently, rewards cannot be withdrawn and will be recorded under the prover's account. ZKPool will soon upgrade to support users in withdrawing the tokens.
+5. The actual value of the reward is not guaranteed. We participate to help Taiko test and become a successful zk-rollup.
+6. ZKPool may consider offering additional incentives from the platform side, especially for early participants. However, this has not yet been determined.
 
 ### Legacy
 #### [ZKPool A0](./ZKPool-A0.md)
