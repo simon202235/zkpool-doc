@@ -62,5 +62,6 @@ Note:
 4. The actual value of the reward is not guaranteed. We participate to help Taiko test and become a successful zk-rollup.
 5. ZKPool may consider offering additional incentives from the platform side, especially for early participants. However, this has not yet been determined.
 
-### [ZKPool A0](./ZKPool-A0.md)
+### Legacy
+#### [ZKPool A0](./ZKPool-A0.md)
 
