@@ -8,7 +8,8 @@ sidebar_position: 3
 This document explains how to run a ZKPool prover.
 
 After logging into ZKPool, follow the guide on how to connect to ZKPool and run a prover.
-![image](https://github.com/aoraki-labs/zkpool-doc/assets/117819366/2b6b1854-084f-47ba-a79a-1608dcbf79ac)
+![image](https://github.com/aoraki-labs/zkpool-doc/assets/117819366/5b9ebf70-332f-47c4-bc35-f2e914982f49)
+
 
 
 
