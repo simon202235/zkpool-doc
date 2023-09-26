@@ -32,9 +32,10 @@ Under this approach, each ZKP project operates as tier 1, defining its own token
 ![Two-tier](./images/two-tier.jpg)
 
 The scope of the two tiers is as follows:
+
 |  | Tier 1 (ZKP projects)  | Tier 2 (ZKPool) |
 | --- | --- | --- |
-| Scope | • Publish proof task.<br> • Establish rewards and penalties.<br> • Define key metrics such as proof window. | • Aggregate proof task.<br> • Schedule and rate prover resources.<br> • Distribute rewards. <br>• Assume penalty risk.<br> • Define price competition strategy |
+| Scope | • Publish proof task.<br/> • Establish rewards and penalties.<br/> • Define key metrics such as proof window. | • Aggregate proof task.<br/> • Schedule and rate prover resources.<br/> • Distribute rewards. <br/>• Assume penalty risk.<br/> • Define price competition strategy |
 
 
 # UMP (Universal Modular Prover)
