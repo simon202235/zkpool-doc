@@ -11,7 +11,7 @@ Taiko is a decentralized, Ethereum-equivalent zk-rollup project with Type 1 zkEV
 
 ZKPool A1 is dedicated to the [Taiko Alpha-5 (A5) Testnet](https://taiko.mirror.xyz/0jc5XA5RVjOUNVdRdGmw9prlsC4deA1XgZJppmXh8rs), and supports users who want to join as individual provers.
 
-## Hardware requirements
+## Hardware Requirements
 
 ZKPool supports various provers to join, CPU, GPU, and so on. 
 
@@ -22,7 +22,7 @@ The hardware that meets the minimum requirements can run CPU prover binary:
 - 8 or 16 core CPU
 - 32 GB memory
 
-## Reward distribution
+## Reward Distribution
 
 As ZKPool takes the risk of slashing, pays the Gas fee for submitting the proof and operation cost, ZKPool will share the reward of tokens with provers. Currently the distribution rule is:
 

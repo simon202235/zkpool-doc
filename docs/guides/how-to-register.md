@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'How to Register'
+sidebar_label: 'How to Register as ZKP Prover'
 sidebar_position: 2
 ---
 
