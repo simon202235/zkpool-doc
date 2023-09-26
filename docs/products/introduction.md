@@ -34,13 +34,7 @@ Under this approach, each ZKP project operates as tier 1, defining its own token
 The scope of the two tiers is as follows:
 |  | Tier 1 (ZKP projects)  | Tier 2 (ZKPool) |
 | --- | --- | --- |
-| Scope | • Publish proof task.
-• Establish rewards and penalties.
-• Define key metrics such as proof window. | • Aggregate proof task
-• Schedule and rate prover resources
-• Distribute rewards
-• Assume penalty risk
-• Define price competition strategy |
+| Scope | • Publish proof task.<br> • Establish rewards and penalties.<br> • Define key metrics such as proof window. | • Aggregate proof task.<br> • Schedule and rate prover resources.<br> • Distribute rewards. <br>• Assume penalty risk.<br> • Define price competition strategy |
 
 
 # UMP (Universal Modular Prover)
@@ -48,4 +42,4 @@ ZKPool utilizes UMP (Universal Modular Prover) to integrate various provers.
 
 A Universal Modular Prover can run on the same hardware platform while supporting the proving work of various ZKP projects.
 
-![UMP](./images/ump.jpg)
+![UMP](./images/UMP.jpg)
