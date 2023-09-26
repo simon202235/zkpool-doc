@@ -8,7 +8,7 @@ sidebar_position: 1
 ZKPool is an open and permissionless platform that connects various ZKP projects and provers, offering multiple capabilities:
 
 - ZKPool gathers the capacity of smaller provers and acts as a super prover proxy, providing necessary stake to ZKP projects.
-- ZKPool adopts a strategy to maximize rewards and minimize the risks of being slashed.
+- ZKPool provides competitive price to win the proof tasks and minimize the risks of being slashed.
 - ZKPool distributes the rewards of provers among participants.
 - ZKPool simplifies the process of joining for provers and ZKP projects.
 
