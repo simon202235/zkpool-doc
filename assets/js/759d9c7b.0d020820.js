@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkzkpool_doc=self.webpackChunkzkpool_doc||[]).push([[678],{8951:e=>{e.exports=JSON.parse('{"title":"Guides","description":"Guides about how to join ZKPool","slug":"/category/guides","permalink":"/category/guides","navigation":{"previous":{"title":"Overview","permalink":"/"},"next":{"title":"Introduction","permalink":"/guides/introduction"}}}')}}]);
