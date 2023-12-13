@@ -37,5 +37,6 @@ Note:
 4. Currently, rewards cannot be withdrawn and will be recorded under the prover's account. ZKPool will soon upgrade to support users in withdrawing the tokens.
 5. The actual value of the reward is not guaranteed. We participate to help Taiko test and become a successful zk-rollup.
 6. ZKPool may consider offering additional incentives from the platform side, especially for early participants. However, this has not yet been determined.
+7. When ZKP projects distribute an airdrop, ZKPool will proportionally share it with ZKP provers. However, it depends on ZKP projects' rule firstly.
 
 
