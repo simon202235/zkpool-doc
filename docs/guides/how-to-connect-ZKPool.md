@@ -9,6 +9,11 @@ Currently, in ZKPool A1, we are opening the prover market to Taiko projects.
 We are also working on opening it to all zkp projects. A detailed guide will be released soon.
 
 # The Prover Market Endpoint for Taiko
-HTTP: http://taiko-a5-prover-simple.zkpool.io
 
-HTTPS: https://taiko-a5-prover.zkpool.io
+### Taiko A5
+
+* HTTP: http://taiko-a5-prover-simple.zkpool.io
+* HTTPS: https://taiko-a5-prover.zkpool.io
+
+### Taiko A6
+http://taiko-a6-prover.zkpool.io:9876
