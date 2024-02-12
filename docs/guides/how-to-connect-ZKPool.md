@@ -11,4 +11,4 @@ We are also working on opening it to all zkp projects. A detailed guide will be 
 # The Prover Market Endpoint for Taiko
 
 ### Taiko A6
-http://taiko-a6-prover.zkpool.io:9876
+http://taiko-a6-prover.zkpool.io
