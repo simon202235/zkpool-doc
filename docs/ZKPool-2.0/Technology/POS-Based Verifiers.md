@@ -9,7 +9,7 @@ A decentralized network of verifier nodes will be established to reach a consens
 
 <div align="center">
     <img src="../images/PoS-verifier-flow.png" alt="PoS-Based Verifiers" style="width:80%;"/>
-    <br>
+    <br/>
     <em>PoS-Based Verifiers Flow</em>
 </div>
 

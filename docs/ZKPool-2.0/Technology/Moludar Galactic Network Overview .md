@@ -23,7 +23,7 @@ However, we will not compromise on security. The protocol's main contract and to
 On our protocol layer, we will deploy frequently operated contract logic, such as the circulation of proof fees, streaming payment, and the lifecycle of proving tasks. This will help maintain a low overall cost, allowing network users to focus on their tasks, not the cost of network transactions.
 <div align="center">
     <img src="../images/flow chart.png" alt="Ethereum L3-Based Appchain" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Ethereum L3-Based Appchain</em>
 </div>
 
@@ -37,7 +37,7 @@ The Galactic contract will act as the central hub for essential network records,
 
 <div align="center">
     <img src="../images/modules.png" alt="modules" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Galactic Network Modules</em>
 </div>
 
@@ -45,7 +45,7 @@ The Galactic contract will act as the central hub for essential network records,
 
 <div align="center">
     <img src="../images/Galactic Contract.png" alt="Galactic Contract" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Galactic Contract</em>
 </div>
 
@@ -59,7 +59,7 @@ The Galactic contract will act as the central hub for essential network records,
 ## What does the Oracle Node contain?
 <div align="center">
     <img src="../images/Oracle nodes.png" alt="Galactic Oracle nodes" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Galactic Oracle nodes</em>
 </div>
 1. Task scheduling: This is a complex logic. The final task scheduling results are written to the Galactic contract, while intermediate task statuses are stored in the local DB. Since task data are huge, which could potentially overload the contract, only the most necessary data are written to the chain.
@@ -77,7 +77,7 @@ A relayer node acts as an external node that integrates with a specific ZK proje
 
 <div align="center">
     <img src="../images/flow.png" alt="Galactic Network Flow" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Galactic Network Flow</em>
 </div>
 
@@ -96,7 +96,7 @@ Here is a detailed sequence diagram
 
 <div align="center">
     <img src="../images/flow chart.png" alt="Galactic Network Flow Sequence" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Galactic Network Flow Sequence</em>
 </div>
 

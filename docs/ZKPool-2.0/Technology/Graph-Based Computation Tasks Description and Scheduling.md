@@ -9,7 +9,7 @@ In ZKP, we also have similar requirements, because:
 
 <div align="center">
     <img src="../images/proof composition.png" alt="Proof Composition" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Proof Composition (Source: Figment Capital)</em>
 </div>
 
@@ -18,7 +18,7 @@ For each zkp proving task, we can define it as a kind of operation of a computat
 Thus, we can use a graph to describe the overall proving tasks. 
 <div align="center">
     <img src="../images/graph-based computation.png" alt="Graph-Based Computation" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Graph-Based Computation</em>
 </div>
 
@@ -80,7 +80,7 @@ The UMP means each ZKP accelerator can support different kinds of ZKP proving ta
 
 <div align="center">
     <img src="../images/UMP.png" alt="UMP" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Universal Modular Prover</em>
 </div>
 
@@ -90,7 +90,7 @@ In this manner, a single accelerator can support multiple ZKP proving binaries.
 
 <div align="center">
     <img src="../images/ump flow.png" alt="UMP Flow" style="width:80%;"/>
-    <br>
+    <br/>
     <em>Universal Modular Prover Flow</em>
 </div>
 
