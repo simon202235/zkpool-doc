@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+sidebar_label: 'Graph based computation tasks description and scheduling'
+---
+
 # ZKP Proving Task Description
 
 In AI, like TensorFlow, we will use graphs to describe the computation. In the graph, there are many operations, such as conv, pooling, and so on. 

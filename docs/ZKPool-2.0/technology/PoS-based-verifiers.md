@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+sidebar_label: 'PoS-based verifiers'
+---
 
 Proofs need to be verified within the network before being sent back or retrieved by the requester for the following reasons:
 

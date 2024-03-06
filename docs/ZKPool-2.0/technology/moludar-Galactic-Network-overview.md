@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /
+sidebar_label: 'Modular Galactic network overview'
 ---
 # Ethereum L3-Based
 
