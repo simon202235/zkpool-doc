@@ -83,7 +83,7 @@ The Oracle node features a plug-in service. This allows provers to connect and d
 
 In this manner, a single accelerator can support multiple ZKP proving binaries.
 
-![UMP Flow](./images/ump flow.png)
+![UMP Flow](./images/ump%20flow.png)
 *Universal Modular Prover Flow*
 
 The local scheduler/Galactic SDK connects to the proving binary plugin via RPC call.

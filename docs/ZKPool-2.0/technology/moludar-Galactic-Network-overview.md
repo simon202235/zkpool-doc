@@ -28,11 +28,15 @@ On our protocol layer, we will deploy frequently operated contract logic, such a
 
 L2 is an extension of Ethereum's performance, while L3 is an extension of L2's performance. We estimate that app-specific L3 can have a gas limit of 0.5-1B, which is equivalent to each block containing 1000 ERC20 transfers. And it can achieve sub-second block speed. In summary, it can reach 1000-5000 tps or higher.
 
-The main transaction cost of L3 is the block data storage written to L2. On average, each L3 transaction consumes 2000-3000 L2 gas. If it reaches 1000 tps, it will consume 0.002 ETH at an L2 gas price of 1 gwei. So if L2 is used as the data availability layer, the cost will be high. Another choice is to use other dedicated data availability layers, such as Celestia, EigenDA or Avail. According to the [calculations](https://medium.com/@numia.data/the-impact-of-celestias-modular-da-layer-on-ethereum-l2s-a-first-look-8321bd41ff25) here, the cost will be reduced by about 300~500 times, which will be a huge improvement in cost reduction.
+The main transaction cost of L3 is the block data storage written to L2. On average, each L3 transaction consumes 2000-3000 L2 gas. If it reaches 1000 tps, it will consume 0.002 ETH at an L2 gas price of 1 gwei. So if L2 is used as the data availability layer, the cost will be high. Our choice is to use other dedicated data availability layers, such as Celestia, EigenDA or Avail. Based on the [calculations](https://medium.com/@numia.data/the-impact-of-celestias-modular-da-layer-on-ethereum-l2s-a-first-look-8321bd41ff25) provided, costs will decrease by approximately 300 to 500 times, making them essentially trivial.
 
 ## Galactic Network Modules
 
-The Galactic contract will act as the central hub for essential network records, including projects, provers, tasks, rewards, bonds, and staking, among others. This will be the foundation for the entire decentralized network. The Oracle node, a component of the network, will handle complex task scheduling, reward distribution, and proof aggregation. Additionally, it will provide utility tools like a data explorer and a front-end. This node could be further decentralized in the future. Prover, relayer, and verifier nodes can all function in a decentralized manner externally, using the Galactic contract as their source of truth.
+The Galactic contract will act as the central hub for essential network records, including projects, provers, tasks, rewards, bonds, and staking, among others. This will be the foundation for the entire decentralized network.
+
+The Oracle node, a component of the network, will handle complex task scheduling, reward distribution, and proof aggregation.
+
+Prover, relayer, and verifier nodes can all function in a decentralized manner externally, using the Galactic contract as their source of truth.
 
  ![modules](./images/modules.png)
  *Galactic Network Modules*
@@ -55,7 +59,6 @@ The Galactic contract will act as the central hub for essential network records,
  *Galactic Oracle nodes*
 
 1. Task scheduling: This is a complex logic. The final task scheduling results are written to the Galactic contract, while intermediate task statuses are stored in the local DB. Since task data are huge, which could potentially overload the contract, only the most necessary data are written to the chain.
-    1. Prover statuses are collected to facilitate the task scheduling process.
 2. Task split and aggregation: A task might be divided into multiple smaller subtasks and proved in parallel to increase efficiency.
 3. Proof aggregation: generate a batched proof for a group of proofs
 4. Complex reward calculation can be done off-chain if the default version in the Galactic contract cannot handle it or involves too many steps.
@@ -63,7 +66,9 @@ The Galactic contract will act as the central hub for essential network records,
 
 ### What does the Relayer Node do?
 
-A relayer node acts as an external node that integrates with a specific ZK project. It does this by retrieving active tasks from the chain.
+A relayer node acts as an external node that integrates with ZKP projects. It does this by retrieving active tasks from the ZKP projects.
+
+In the meanwhile, the relayer node needs to pay the gas fee and provide necessary ZKP projects’ staking toke if the corresponding projects require.
 
 ### What’s the task flow?
 
@@ -81,7 +86,7 @@ A relayer node acts as an external node that integrates with a specific ZK proje
 9. The Galactic contract or the oracle node calculates the reward.
 10. The Galactic contract returns the bond and shares the reward with the prover.
 
-Here is a detailed sequence diagram
+Here is a detailed sequence diagram:
 
 ![Galactic Network Flow Sequence](./images/flow%20chart.png)
 *Galactic Network Flow Sequence*
