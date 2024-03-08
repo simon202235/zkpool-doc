@@ -1,7 +1,9 @@
 ---
+sidebar_label: 'PoS-Based Verifiers'
 sidebar_position: 3
-sidebar_label: 'PoS-based verifiers'
 ---
+
+# PoS-Based Verifiers
 
 Proofs need to be verified within the network before being sent back or retrieved by the requester for the following reasons:
 
@@ -11,11 +13,7 @@ Proofs need to be verified within the network before being sent back or retrieve
 
 A decentralized network of verifier nodes will be established to reach a consensus on proof settlement. A node offers greater flexibility than a verifier contract because not all projects have a Solidity version of verification code. Verifying the batched proof can further reduce the cost. The mechanism will resemble Ethereum's proof of stake but likely in a simpler form. The process is as follows:
 
-<div align="center">
-    <img src="../images/PoS-verifier-flow.png" alt="PoS-Based Verifiers" style="width:80%;"/>
-    <br/>
-    <em>PoS-Based Verifiers Flow</em>
-</div>
+![PoS-Based Verifiers](./images/PoS-verifier-flow.png)*PoS-Based Verifiers Flow*
 
 1. ZK projects supply the verifier code, which can be in different languages.
 2. Either the ZK project or the community operates one or more verifier nodes.

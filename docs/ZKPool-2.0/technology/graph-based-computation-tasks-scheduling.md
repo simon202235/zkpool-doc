@@ -1,9 +1,9 @@
 ---
+sidebar_label: 'Graph-Based Computation  Tasks Scheduling'
 sidebar_position: 2
-sidebar_label: 'Graph based computation tasks description and scheduling'
 ---
-
-# ZKP Proving Task Description
+# Graph-Based Computation Tasks Scheduling
+## ZKP Proving Task Description
 
 In AI, like TensorFlow, we will use graphs to describe the computation. In the graph, there are many operations, such as conv, pooling, and so on. 
 
@@ -12,20 +12,13 @@ In ZKP, we also have similar requirements, because:
 1. For ZKVM, the continuation technology will split the big proving tasks into smaller ones. 
 2. The recursion/composition/aggregation technology is widely used.
 
-<div align="center">
-    <img src="../images/proof composition.png" alt="Proof Composition" style="width:80%;"/>
-    <br/>
-    <em>Proof Composition (Source: Figment Capital)</em>
-</div>
+![Proof Composition](./images/proof%20composition.png)*Proof Composition (Source: Figment Capital)*
 
 For each zkp proving task, we can define it as a kind of operation of a computation graph. Each device works as a computation node to finish the part of the proving tasks.
 
 Thus, we can use a graph to describe the overall proving tasks. 
-<div align="center">
-    <img src="../images/graph-based computation.png" alt="Graph-Based Computation" style="width:80%;"/>
-    <br/>
-    <em>Graph-Based Computation</em>
-</div>
+![Graph-Based Computation](./images/graph-based%20computation.png)
+*Graph-Based Computation*
 
 For each operation, we can define these properties:
 
@@ -45,7 +38,7 @@ For each operation, we can define these properties:
 - devices id (null when it’s not assigned)
 - output operation
 
-# Scheduler
+## Scheduler
 
 We will use Oracle Node to take the role of scheduling.
 
@@ -79,25 +72,19 @@ When we need more than one device, and then we will exclude the assigned device 
 
 Finally, we will fill in the device id for each operation of the computation graph.
 
-# Galactic Universal Modular Prover
+## Galactic Universal Modular Prover
 
 The UMP means each ZKP accelerator can support different kinds of ZKP proving tasks.
 
-<div align="center">
-    <img src="../images/UMP.png" alt="UMP" style="width:80%;"/>
-    <br/>
-    <em>Universal Modular Prover</em>
-</div>
+![UMP](./images/UMP.png)
+*Universal Modular Prover*
 
 The Oracle node features a plug-in service. This allows provers to connect and determine the types of tasks the prover can manage. The corresponding proving binary Docker is then downloaded, enabling the node to handle such tasks.
 
 In this manner, a single accelerator can support multiple ZKP proving binaries.
 
-<div align="center">
-    <img src="../images/ump flow.png" alt="UMP Flow" style="width:80%;"/>
-    <br/>
-    <em>Universal Modular Prover Flow</em>
-</div>
+![UMP Flow](./images/ump flow.png)
+*Universal Modular Prover Flow*
 
 The local scheduler/Galactic SDK connects to the proving binary plugin via RPC call.
 
@@ -116,7 +103,7 @@ The computation node has two modes:
 
 Each kind of requester project can define its ideal mode.
 
-# Power of Computation
+## Power of Computation
 
 The platform’s incentives are measured by the Power of Computation. Without accurate computation power measurement, we can’t effectively incentivize the devices.
 

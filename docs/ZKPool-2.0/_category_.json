@@ -1,8 +1,8 @@
 {
-  "label": "ZKPool 2.0",
-  "position": 3,
+  "label": "ZKPool-2.0",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Galactic network overview"
+    "description": "Introduction about the ZKPool-2.0"
   }
 }

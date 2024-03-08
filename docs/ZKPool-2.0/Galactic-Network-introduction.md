@@ -1,9 +1,10 @@
 ---
+sidebar_label: 'Galactic Network Introduction'
 sidebar_position: 1
-slug: /
+slug: /ZKPool-2.0/
 ---
 
-We refer to ZKPool 2.0 as the [Galactic Network](https://en.wikipedia.org/wiki/Intergalactic_Computer_Network) in tribute to J.C.R. Licklider, who first proposed the Galactic Network concept, an early vision of the open internet.
+We refer to ZKPool-2.0 as the [Galactic Network](https://en.wikipedia.org/wiki/Intergalactic_Computer_Network) in tribute to J.C.R. Licklider, who first proposed the Galactic Network concept, an early vision of the open internet.
 
 # Background
 
