@@ -1,0 +1,8 @@
+{
+  "label": "Guide",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Guide to run provers, verifiers and integrate with ZKPool-2.0. (Coming soon)"
+  }
+}

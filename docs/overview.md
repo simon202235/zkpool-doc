@@ -55,6 +55,5 @@ The design principles of ZKPool include:
 
 The ZKPool will have the following milestones:
 
-- Connect one ZKP project (Done)
-- Connect multiple ZKP projects with the UMP (Universal Modular Prover) (Ongoing)
-- Fully decentralized ZKP computing pool via Super-UMP (TBD)
+- ZKPool-1.0: Connect one ZKP project (Done)
+- ZKPool-2.0: Fully decentralized ZKP computing pool via UMP (Universal Modular Prover)(Ongoing)
