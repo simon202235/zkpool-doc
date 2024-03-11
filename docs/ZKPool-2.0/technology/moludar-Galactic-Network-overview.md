@@ -23,7 +23,7 @@ However, we will not compromise on security. The protocol's main contract and to
 
 On our protocol layer, we will deploy frequently operated contract logic, such as the circulation of proof fees, streaming payment, and the lifecycle of proving tasks. This will help maintain a low overall cost, allowing network users to focus on their tasks, not the cost of network transactions.
 
- ![Ethereum L3-Based Appchain](./images/L3.png)
+ ![Ethereum L3-Based Appchain](./images/L3.png) 
  *Ethereum L3-Based Appchain*
 
 L2 is an extension of Ethereum's performance, while L3 is an extension of L2's performance. We estimate that app-specific L3 can have a gas limit of 0.5-1B, which is equivalent to each block containing 1000 ERC20 transfers. And it can achieve sub-second block speed. In summary, it can reach 1000-5000 tps or higher.
@@ -47,7 +47,7 @@ Prover, relayer, and verifier nodes can all function in a decentralized manner e
  *Galactic Contracts*
 
 1. Task events for actions: submission, proof, and verification.
-2. Users, projects, provers, verifiers and tasks.
+2. Projects, provers, verifiers and tasks.
 3. Provers' rewards: these are updated periodically, for instance, daily.
 4. The default reward calculation is conducted on-chain.
 5. Provers' bonds.
@@ -62,7 +62,6 @@ Prover, relayer, and verifier nodes can all function in a decentralized manner e
 2. Task split and aggregation: A task might be divided into multiple smaller subtasks and proved in parallel to increase efficiency.
 3. Proof aggregation: generate a batched proof for a group of proofs
 4. Complex reward calculation can be done off-chain if the default version in the Galactic contract cannot handle it or involves too many steps.
-5. Utility tools such as the front-end and data explorer.
 
 ### What does the Relayer Node do?
 
@@ -71,24 +70,27 @@ A relayer node acts as an external node that integrates with ZKP projects. It do
 In the meanwhile, the relayer node needs to pay the gas fee and provide necessary ZKP projects’ staking toke if the corresponding projects require.
 
 ### What’s the task flow?
+Here are a detailed modules relationship and a sequence diagram:
 
 ![Galactic Network Flow](./images/flow.png)
- *Galactic Network Flow*
-
-1. The task request is directly submitted to the Galactic contract (Active mode).
-2. Alternatively, the relayer retrieves the task from another chain (Passive mode). Then, the relayer submits the task with the bond to the Galactic contract.
-3. The oracle node schedules the task based on the prover's attributes and availability.
-4. The prover node syncs the task from the Galactic contract.
-5. The prover node generates the proof and sends it back to the Galactic contract.
-6. Oracle Node aggregates proofs and produce an batchedProof to the Galactic contract
-7. The Galactic contract publishes the verifier task.
-8. Once the Galactic contract evaluates that the majority of verification results pass, it marks all the proofs in the batch  as verified.
-9. The Galactic contract or the oracle node calculates the reward.
-10. The Galactic contract returns the bond and shares the reward with the prover.
-
-Here is a detailed sequence diagram:
+ *Galactic Network modules relationship*
 
 ![Galactic Network Flow Sequence](./images/flow%20chart.png)
 *Galactic Network Flow Sequence*
+
+The steps are like below:
+1. The task request is directly submitted to the Galactic contract (Active mode).
+    
+    Alternatively, in Passive mode (as shown in the above diagram), the relayer retrieves the task from another chain and then submits the task, along with the bond, to the Galactic contract. The task should be described as a computation graph.
+    
+2. The Galactic contract publishes the proving task. The oracle node then retrieves task information from the contract, schedules the task based on the computation graph and the prover's attributes and availability, and sends the scheduled result to the contract.
+3. The Galactic contract publishes the scheduled results, enabling each prover to determine whether they've been selected to join the task.
+4. The prover node syncs the task from the Galactic contract, generates the proof, and sends it back to the Oracle contract.
+5. An Oracle node monitors the Oracle contract. Plans are in place for an Oracle node to initiate an aggregation proof task, after which the verifiers will only need to verify the aggregated proof.
+6. An Oracle node schedules the verifiers to perform the verification and notifies the Galactic contract.
+7. The Galactic contract publishes the verifier task. The selected verifiers monitor this and begin verification.
+8. The verifier returns the verification result to the contract. Once the Galactic contract determines that the majority of verification results pass, it marks the proof as verified.
+9. The Galactic Oracle calculates the reward. (This logic may be transferred to the contract later.)
+10. The Galactic contract returns the bond and shares the reward with the prover. Also the verifiers will get part of the reward.
 
 In the architecture above there will be lots of interactions between other parties with the Galactic contract. This drives our choice of Ethereum L3 which will further reduce the transaction cost.

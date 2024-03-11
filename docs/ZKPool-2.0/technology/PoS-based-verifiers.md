@@ -32,4 +32,6 @@ We choose a verifier network over a DAO which handles challenges in an optimisti
 3. It takes longer for a DAO to settle a proof if a challenge arises.
 4. In both scenarios, verification codes from various ZK projects are required.
 
-Building a verifier network could be approached in two ways: by starting from scratch with a simplified Proof of Stake (PoS) version, or by utilizing an existing platform like EigenLayer. If EigenLayer's staking, slashing, operator, and Actively Validated Services (AVS) capabilities are leveraged, less development is required as the already developed PoS platform can be reused. However, it's necessary to ensure that all verifier AVS nodes have stakes for the network to function as expected. Since EigenLayer runs on Ethereum Layer 1, interactions with smart contracts can be expensive and relatively slow. The cost and transactions per second (TPS) are factors to consider.
+However, if there's a conflict between the PoS-Based verification results and the requestors' verification results, we'll need the governance DAO to handle such an issue.
+
+Additionally, using an existing platform like EigenLayer is an option for us.

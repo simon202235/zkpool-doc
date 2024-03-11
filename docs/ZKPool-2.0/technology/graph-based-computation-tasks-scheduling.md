@@ -38,6 +38,46 @@ For each operation, we can define these properties:
 - devices id (null when it’s not assigned)
 - output operation
 
+## Power of Computation
+
+The platform's incentives are determined by the Power of Computation. Without an accurate measurement of computation power, we can't effectively incentivize devices.
+
+For Zero-Knowledge Proof (ZKP) algorithms, most computations are operations such as Multi-Scalar Multiplication (MSM), Number Theoretic Transform (NTT), and Hash, which are similar to operations in Artificial Intelligence (AI) like encoders, decoders, or Convolutional Neural Networks (CNN).
+
+We can create a table defining the computation amount for each operation based on the add/multiply function and its bitwidth. This is referred to as the 'Gas' of the ZKP/AI. An offline benchmark tool can then be used to calculate the total Gas for an algorithm.
+
+This method won't be 100% accurate, so our final computation can be measured using a formula like:
+
+$P = P_{gas} * Gas$
+
+Here, $P$ represents the total computation amount for an algorithm, and $P_{gas}$ is a dynamic price that can be retrieved from the Galactic network to reflect the supply and demand relationship.
+
+## Galactic Universal Modular Prover
+
+The UMP means each ZKP accelerator can support different kinds of ZKP proving tasks.
+
+![UMP](./images/UMP.png)
+*Universal Modular Prover*
+
+The Oracle node features a plug-in service. This allows provers to connect and determine the types of tasks the prover can manage. The corresponding proving binary Docker is then downloaded, enabling the node to handle such tasks.
+
+In this manner, a single accelerator can support multiple ZKP proving binaries.
+
+The Galactic SDK client connects to the proving binary plugin via RPC call.
+
+The protocol includes:
+
+1. Init 
+2. Start
+3. Stop
+
+There is a mechanism to trigger different kinds of computation. 
+
+- high-efficient mode (default mode): The computation service is restarted each time.  It can easily switch among different tasks.
+- high-performance mode: The computation service stays in the memory, and when a new task comes, it doesn’t need to restart the service. It’s used for high throughput tasks.
+
+Each kind of requester project can define its expected mode.
+
 ## Scheduler
 
 We will use Oracle Node to take the role of scheduling.
@@ -61,59 +101,15 @@ Firstly, after analyzing a computation graph, a
 
 Then we we find a candidate device list for each operation. 
 
-If there is more than one candidate for each operation, we will choose a device according to its reputation and random mechanism.
+Here we can adopt a relatively simple and effective strategy rather than a complex reputation system.
 
-1. A random number in [1, 100] is generated as R
-2. Assume all the reputation scores of candidate devices are: [s1, s2…si……sn]
-3. Normalize all the reputations as si’=si*100/sum(s1…sn), and the new vector is [s1’, s2’…si’……sn’]
-4. Compare R with sum(s1’…si’), if the sum is greater than R, then we choose device i.
+1. The proposed rules include:
+- If a prover fails to generate proof in time, a filter window will be used to exclude this prover.
+- If the prover fails to generate proof for the second time, the length of the prohibition window will be doubled.
+- If there are more than 3 consecutive failures, then the prover will be permanently banned. The only way to regain access is to rename the prover and reconnect to the scheduler.
+2. The scheduler in the Oracle node can reschedule the prover if they fail to generate proof in time. 
+3. For tasks with high penalty amounts, the scheduler could assign more than one prover.
 
 When we need more than one device, and then we will exclude the assigned device and use the above method to choose the other devices.
 
-Finally, we will fill in the device id for each operation of the computation graph.
-
-## Galactic Universal Modular Prover
-
-The UMP means each ZKP accelerator can support different kinds of ZKP proving tasks.
-
-![UMP](./images/UMP.png)
-*Universal Modular Prover*
-
-The Oracle node features a plug-in service. This allows provers to connect and determine the types of tasks the prover can manage. The corresponding proving binary Docker is then downloaded, enabling the node to handle such tasks.
-
-In this manner, a single accelerator can support multiple ZKP proving binaries.
-
-![UMP Flow](./images/ump%20flow.png)
-*Universal Modular Prover Flow*
-
-The local scheduler/Galactic SDK connects to the proving binary plugin via RPC call.
-
-The protocol includes:
-
-1. init 
-2. start computation
-3. stop
-
-A mechanism to trigger different kinds of computation.
-
-The computation node has two modes: 
-
-- high-efficient mode (default mode): The computation service is restarted each time.  It can easily switch among different tasks.
-- high-performance mode: The computation service stays in the memory, and when a new task comes, it doesn’t need to restart the service. It’s used for high throughput tasks.
-
-Each kind of requester project can define its ideal mode.
-
-## Power of Computation
-
-The platform’s incentives are measured by the Power of Computation. Without accurate computation power measurement, we can’t effectively incentivize the devices.
-
-For GPU, we will use the real amount of OP to benchmark its contribution similar to Nsight Compute tools.
-
-For any GPU, the most important acceleration engine is cuda cores or tensor cores. The ZKP usually uses CUDA to accelerate and the AI uses tensor core to accelerate.
-
-A benchmark will be used to measure the computation amount required by some tasks.
-
-We will define different computations of Galactic-gas, such as:
-
-- tensor core: xx gas/TOPs
-- cuda core:  xx gas/TOPs
+Finally, we will fill in the device ID for each operation of the computation graph.
