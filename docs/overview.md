@@ -5,9 +5,9 @@ slug: /
 
 # Overview
 
-There has been an explosion of ZKP (Zero-Knowledge Proof) applications and zk-Rollups, especially Ethereum zk-Rollup. 
+There has been an explosion of Zero-Knowledge Proof (ZKP) applications and zk-Rollups, especially Ethereum zk-Rollups.
 
-ZKP computation power is different from POW. While POW requires many machines to achieve decentralization, ZKP is a service that each project needs, and its cost is an essential factor. A comparison is shown in the below table.
+ZKP computation power is different from POW. While POW requires many machines to achieve decentralization, ZKP is a service that each project needs, and its cost is an essential factor. A comparison is shown in the table below.
 
 | Aspect | POW Miners | ZKP Provers |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ ZKP computation power is different from POW. While POW requires many machines to
 | Computation Content | A large number of random, repeated, and similar functions. | Complex mathematical operations with deterministic results. |
 | Computation Redundancy | Necessary | Unnecessary |
 
-The adoption of ZKP is still facing challenges from both the ZKP projects' side and the ZKP prover operators' side due to these features.
+The adoption of ZKP is still facing challenges from both the side of ZKP projects and the operators of ZKP provers due to these features.
 
 ## Challenges for ZKP projects
 
@@ -31,29 +31,29 @@ Currently, each ZKP project has to make a considerable effort to build a proving
 
 The ZKP prover operators meet some new challenges other than POW miners.
 
-1.  Some ZKP projects may require a gas fee to submit proof or staking as a prover, which brings cost and risk for the provers. 
-2. Some projects may use bid or random selection solutions to avoid redundant computation, which may not fully utilize the prover when it hasn't won the task. It reduces the revenue a prover can have. 
-3. The various ZKP projects have different algorithms and prover software, making it difficult for provers to accommodate these various projects.
+1.  Some ZKP projects may require a gas fee to submit proof or staking as a prover, which introduces costs and risks for the provers.
+2. Some projects may use bid or random selection solutions to avoid redundant computation, which may underutilize the prover's capacity when it hasn't won the task. This diminishes the potential revenue for a prover.
+3. The various ZKP projects have different algorithms and prover software, making it difficult for provers to adapt to these various projects.
 
 ## The Design Target of ZKPool
 
-The ZKPool's mission is to make Zero-Knowledge Proof flow in the digital world. The ZKPool wants to build a bridge between ZKP applications and ZKP provers.
+The ZKPool's mission is to make ZKP flow in the digital world. ZKPool aims to create a bridge between Zero-Knowledge Proof applications and provers.
 
-At ZKPool, we aim to provide a solution that addresses the challenges in the proving system.
+ZKPool strives to offer a solution that addresses the challenges in the proving system.
 
 The ideal solution is to provide the following to the ZKP projects:
 
 1. Provides fast and high-throughput performance.
-2. Offers cheap and transparent costs.
+2. Offers affordable and transparent costs.
 
 The design principles of ZKPool include:
 
-- Economic efficiency. Find a balance between the requirements of ZKP projects' low-cost and ZKP prover's higher profit.
-- Transparency: Keep revenue distribution transparent
+- Economic efficiency: Striking a balance between the low-cost requirements of ZKP projects and the higher profit expectations of ZKP provers.
+- Transparency: Ensuring transparent revenue distribution.
 
 ## The Roadmap of ZKPool
 
 The ZKPool will have the following milestones:
 
-- ZKPool-1.0: Connect one ZKP project (Done)
+- ZKPool-1.0: Build on at least one ZKP project (Completed)
 - ZKPool-2.0: Fully decentralized ZKP computing pool via UMP (Universal Modular Prover)(Ongoing)

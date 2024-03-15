@@ -16,13 +16,13 @@ After logging into ZKPool, follow the guide on how to connect to ZKPool and run 
 The basic flow is as follows:
 
 1. Choose your operating system: Ubuntu 20.04/22.04 or MacOS ARM or MacOS x86.
-2. Choose between CPU/GPU (coming soon).
+2. Choose between CPU or GPU (coming soon).
 3. Generate an access key for your account.
-4. Follow one command to download your keys and prover binary, and then run the prover binary.
+4. Follow one command to download your keys and the prover binary, and then run the prover binary.
 
 ## How to stop a prover
 
-To stop a running prover, simple run the following command
+To stop a running prover, simply run the following command
 
 ```shell
 pkill zkpool-prover
