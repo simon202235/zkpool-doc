@@ -12,11 +12,13 @@ In ZKP, we also have similar requirements, because:
 1. For ZKVM, the continuation technology will split the big proving tasks into smaller ones. 
 2. The recursion/composition/aggregation technology is widely used.
 
-![Proof Composition](./images/proof%20composition.png)*Proof Composition (Source: Figment Capital)*
+![Proof Composition](./images/proof%20composition.png)
+*Proof Composition (Source: Figment Capital)*
 
 For each zkp proving task, we can define it as a kind of operation of a computation graph. Each device works as a computation node to finish the part of the proving tasks.
 
 Thus, we can use a graph to describe the overall proving tasks. 
+
 ![Graph-Based Computation](./images/graph-based%20computation.png)
 *Graph-Based Computation*
 
