@@ -5,17 +5,17 @@ sidebar_position: 2
 # Graph-Based Computation Tasks Scheduling
 ## ZKP Proving Task Description
 
-In AI, like TensorFlow, we will use graphs to describe the computation. In the graph, there are many operations, such as conv, pooling, and so on. 
+In AI frameworks like TensorFlow, we use graphs to describe computations. These graphs contain various operations, such as convolution and pooling. 
 
-In ZKP, we also have similar requirements, because:
+Similarly, in ZKP, we have comparable requirements because:
 
-1. For ZKVM, the continuation technology will split the big proving tasks into smaller ones. 
-2. The recursion/composition/aggregation technology is widely used.
+1. For ZKVM, continuation technology splits large proving tasks into smaller ones. 
+2. Recursion, composition, and aggregation technologies are widely used.
 
 ![Proof Composition](./images/proof%20composition.png)
 *Proof Composition (Source: Figment Capital)*
 
-For each zkp proving task, we can define it as a kind of operation of a computation graph. Each device works as a computation node to finish the part of the proving tasks.
+For each ZKP proving task, we can define it as a kind of operation within a computation graph. Each device acts as a computation node to complete part of the proving tasks.
 
 Thus, we can use a graph to describe the overall proving tasks. 
 
@@ -42,17 +42,18 @@ For each operation, we can define these properties:
 
 ## Power of Computation
 
-The platform's incentives are determined by the Power of Computation. Without an accurate measurement of computation power, we can't effectively incentivize devices.
+The platform's incentives are determined by the Power of Computation. Without an accurate measurement of computation power, effectively incentivizing devices is challenging.
 
-For Zero-Knowledge Proof (ZKP) algorithms, most computations are operations such as Multi-Scalar Multiplication (MSM), Number Theoretic Transform (NTT), and Hash, which are similar to operations in Artificial Intelligence (AI) like encoders, decoders, or Convolutional Neural Networks (CNN).
+For ZKP algorithms, most computations involve operations like Multi-Scalar Multiplication (MSM), Number Theoretic Transform (NTT), and hashing, similar to operations in AI, such as encoders, decoders, or Convolutional Neural Networks (CNN).
 
-We can create a table defining the computation amount for each operation based on the add/multiply function and its bitwidth. This is referred to as the 'Gas' of the ZKP/AI. An offline benchmark tool can then be used to calculate the total Gas for an algorithm.
+We can create a table to define the computation amount for each operation based on the add/multiply function and its bitwidth. This is referred to as the 'Gas' of the ZKP/AI. An offline benchmark tool can then calculate the total Gas for an algorithm.
 
 This method won't be 100% accurate, so our final computation can be measured using a formula like:
 
 $P = P_{gas} * Gas$
 
-Here, $P$ represents the total computation amount for an algorithm, and $P_{gas}$ is a dynamic price that can be retrieved from the Galactic network to reflect the supply and demand relationship.
+Here, $P$ represents the total computation amount for an algorithm.
+$P_{gas}$ is a dynamic price that can be retrieved from the Galactic network to reflect the supply and demand relationship.
 
 ## Galactic Universal Modular Prover
 
@@ -61,7 +62,7 @@ The UMP means each ZKP accelerator can support different kinds of ZKP proving ta
 ![UMP](./images/UMP.png)
 *Universal Modular Prover*
 
-The Oracle node features a plug-in service. This allows provers to connect and determine the types of tasks the prover can manage. The corresponding proving binary Docker is then downloaded, enabling the node to handle such tasks.
+The Oracle node features a plug-in service, Allowing provers to connect and determine the types of tasks the prover can manage. Subsequently, the corresponding proving binary Docker is then downloaded, enabling the node to handle such tasks.
 
 In this manner, a single accelerator can support multiple ZKP proving binaries.
 
@@ -75,10 +76,10 @@ The protocol includes:
 
 There is a mechanism to trigger different kinds of computation. 
 
-- high-efficient mode (default mode): The computation service is restarted each time.  It can easily switch among different tasks.
-- high-performance mode: The computation service stays in the memory, and when a new task comes, it doesn’t need to restart the service. It’s used for high throughput tasks.
+- High-efficiency mode (default mode): The computation service is restarted each time, allowing easy switching among different tasks.
+- High-performance mode: The computation service remains in memory, and when a new task comes, it doesn’t need to restart the service. This mode is used for high throughput tasks.
 
-Each kind of requester project can define its expected mode.
+Each requester project can define its expected mode.
 
 ## Scheduler
 
@@ -101,17 +102,17 @@ Firstly, after analyzing a computation graph, a
     - GPU type
     - Memory
 
-Then we we find a candidate device list for each operation. 
+Then we find a candidate device list for each operation. 
 
-Here we can adopt a relatively simple and effective strategy rather than a complex reputation system.
+Here we can adopt a relatively simple and effective strategy instead of a complex reputation system.
 
 1. The proposed rules include:
 - If a prover fails to generate proof in time, a filter window will be used to exclude this prover.
-- If the prover fails to generate proof for the second time, the length of the prohibition window will be doubled.
-- If there are more than 3 consecutive failures, then the prover will be permanently banned. The only way to regain access is to rename the prover and reconnect to the scheduler.
+- If the prover fails to generate proof for the second time, the duration of the prohibition window will be doubled.
+- If there are more than three consecutive failures, then the prover will be permanently banned. The only way to regain access is to rename the prover and reconnect to the scheduler.
 2. The scheduler in the Oracle node can reschedule the prover if they fail to generate proof in time. 
-3. For tasks with high penalty amounts, the scheduler could assign more than one prover.
+3. For tasks with high penalty amounts, the scheduler could assign more than one prover to ensure reliability.
 
-When we need more than one device, and then we will exclude the assigned device and use the above method to choose the other devices.
+When we need more than one device, we will exclude the assigned device and use the method described above to select additional devices.
 
 Finally, we will fill in the device ID for each operation of the computation graph.
